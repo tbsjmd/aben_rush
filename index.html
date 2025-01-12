@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABen Rush - The Ultimate Runner Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="menu" id="mainMenu">
+            <h1>ABen Rush</h1>
+            <button id="startButton">Start Game</button>
+            <p class="tagline">"Ay Ay ABen!"</p>
+        </div>
+        
+        <div class="game-area" id="gameArea">
+            <div class="floor"></div>
+            <div class="player" id="player">
+                <div class="antenna-left"></div>
+                <div class="antenna-right"></div>
+                <div class="tail"></div>
+            </div>
+            <div class="score">Score: <span id="scoreValue">0</span></div>
+            <div class="speed-indicator">Speed: <span id="speedValue">1</span>x</div>
+        </div>
+        
+        <div class="game-over hidden" id="gameOver">
+            <h2>Game Over!</h2>
+            <p>Score: <span id="finalScore">0</span></p>
+            <button id="restartButton">Play Again</button>
+            <button onclick="game.openShop()">Shop</button>
+        </div>
+        
+        <div class="shop-menu hidden" id="shopMenu">
+            <h2>Skin Shop</h2>
+            <div class="shop-items" id="shopItems"></div>
+        </div>
+        
+        <div class="stats">
+            ACoins: <span id="acoins">0</span>
+            <button onclick="game.openShop()">Shop</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
